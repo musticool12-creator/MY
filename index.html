@@ -1,120 +1,149 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MY-TECH</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Webseite</title>
 
-<style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#4facfe,#00f2fe);
-color:white;
-text-align:center;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #111;
+    }
 
-header{
-padding:60px 20px;
-}
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-h1{
-font-size:50px;
-margin-bottom:10px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
 
-p{
-font-size:20px;
-opacity:0.9;
-}
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-button{
-margin-top:20px;
-padding:12px 25px;
-font-size:16px;
-border:none;
-border-radius:25px;
-background:white;
-color:#333;
-cursor:pointer;
-transition:0.3s;
-}
+    .hero {
+      padding: 100px 40px;
+      text-align: center;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: white;
+    }
 
-button:hover{
-transform:scale(1.1);
-}
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
 
-section{
-background:white;
-color:#333;
-padding:60px 20px;
-}
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-.card-container{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:20px;
-}
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: white;
+      color: #1e3a8a;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.card{
-background:#f5f5f5;
-padding:25px;
-border-radius:15px;
-width:220px;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
-transition:0.3s;
-}
+    section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-.card:hover{
-transform:translateY(-10px);
-}
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-footer{
-padding:20px;
-font-size:14px;
-opacity:0.8;
-}
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
 
-</style>
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111827;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-<h1>MY-TECH🚀</h1>
-<p>Willkommen auf meiner Webseite</p>
-<button onclick="alert('Danke fürs Besuchen!')">Mehr erfahren</button>
+  <h1>Meine Seite</h1>
+  <nav>
+    <a href="#about">Über mich</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
 </header>
 
-<section>
-
-<h2>Über mich</h2>
-
-<div class="card-container">
-
-<div class="card">
-<h3>🌍 Projekte</h3>
-<p>Ich erstelle Webseiten und coole Projekte.</p>
+<div class="hero">
+  <h2>Willkommen auf meiner Webseite</h2>
+  <p>Modern, schnell und professionell – erstellt mit GitHub Pages</p>
+  <a href="#contact" class="button">Kontakt aufnehmen</a>
 </div>
 
-<div class="card">
-<h3>💻 Coding</h3>
-<p>Ich lerne Programmieren und Webentwicklung.</p>
-</div>
+<section id="about">
+  <h2>Über mich</h2>
+  <p>
+    Hier kannst du dich oder dein Projekt vorstellen. Beschreibe kurz,
+    was du machst und was dich besonders macht.
+  </p>
+</section>
 
-<div class="card">
-<h3>🚀 Zukunft</h3>
-<p>Viele neue Ideen und Projekte kommen noch.</p>
-</div>
+<section id="services">
+  <h2>Meine Leistungen</h2>
+  <div class="features">
+    <div class="card">
+      <h3>Webdesign</h3>
+      <p>Moderne und responsive Webseiten.</p>
+    </div>
+    <div class="card">
+      <h3>Entwicklung</h3>
+      <p>Sauberer und effizienter Code.</p>
+    </div>
+    <div class="card">
+      <h3>Support</h3>
+      <p>Schnelle Hilfe bei Problemen.</p>
+    </div>
+  </div>
+</section>
 
-</div>
-
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p>Email: deine@email.com</p>
 </section>
 
 <footer>
-© 2026 MY-TECH Creator
+  <p>© 2026 Meine Webseite</p>
 </footer>
 
 </body>
