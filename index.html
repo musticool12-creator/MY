@@ -5,130 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>my-tech.shop</title>
 
-  <!-- Font -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0a0f1c;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: rgba(10,15,28,0.8);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-    }
-
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      color: #3b82f6;
-      font-size: 20px;
-    }
-
-    nav a {
-      color: #cbd5e1;
-      margin-left: 25px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #3b82f6;
-    }
-
-    .hero {
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at top, #1e3a8a, #020617);
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 48px;
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 20px;
-    }
-
-    .hero span {
-      color: #3b82f6;
-    }
-
-    .hero p {
-      max-width: 600px;
-      opacity: 0.8;
-    }
-
-    .btn {
-      margin-top: 30px;
-      padding: 14px 28px;
-      border: 1px solid #3b82f6;
-      color: #3b82f6;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #3b82f6;
-      color: white;
-      box-shadow: 0 0 20px #3b82f6;
-    }
-
-    section {
-      padding: 80px 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      font-family: 'Orbitron', sans-serif;
-      margin-bottom: 20px;
-      font-size: 28px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: #111827;
-      padding: 25px;
-      border-radius: 12px;
-      border: 1px solid rgba(59,130,246,0.2);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(59,130,246,0.3);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #1f2937;
-      margin-top: 40px;
-    }
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:'Inter', sans-serif; background:#0a0f1c; color:#e5e7eb; line-height:1.7; scroll-behavior:smooth;}
+    header {display:flex; justify-content:space-between; align-items:center; padding:20px 60px; background:rgba(10,15,28,0.85); backdrop-filter:blur(12px); position:sticky; top:0; z-index:1000; transition:all 0.3s ease;}
+    header h1 {font-family:'Orbitron', sans-serif; color:#3b82f6; font-size:24px; letter-spacing:1px;}
+    nav a {color:#cbd5e1; margin-left:30px; text-decoration:none; font-weight:500; transition:0.3s; position:relative;}
+    nav a::after {content:''; display:block; height:2px; width:0; background:#3b82f6; transition:width 0.3s; position:absolute; bottom:-4px; left:0;}
+    nav a:hover::after {width:100%;}
+    .hero {height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background:radial-gradient(circle at center, #1e3a8a, #020617); text-align:center; padding:0 20px; animation:fadeIn 1.5s ease-in;}
+    .hero h2 {font-size:52px; font-family:'Orbitron', sans-serif; margin-bottom:20px; color:#ffffff;}
+    .hero span {color:#3b82f6;}
+    .hero p {max-width:650px; opacity:0.85; margin-bottom:30px; font-size:18px;}
+    .btn {padding:14px 32px; border:1px solid #3b82f6; color:#3b82f6; text-decoration:none; border-radius:10px; font-weight:500; transition:all 0.3s ease;}
+    .btn:hover {background:#3b82f6; color:#ffffff; box-shadow:0 0 25px #3b82f6; transform:translateY(-3px);}
+    section {padding:100px 40px; max-width:1200px; margin:auto;}
+    h2 {font-family:'Orbitron', sans-serif; margin-bottom:25px; font-size:32px; color:#ffffff; position:relative;}
+    h2::after {content:''; display:block; width:60px; height:3px; background:#3b82f6; margin-top:10px; border-radius:2px;}
+    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; margin-top:35px;}
+    .card {background:#111827; padding:30px; border-radius:15px; border:1px solid rgba(59,130,246,0.2); transition:all 0.3s ease; cursor:pointer;}
+    .card:hover {transform:translateY(-8px) scale(1.02); box-shadow:0 0 25px rgba(59,130,246,0.4); background:#1f2937;}
+    .card h3 {margin-bottom:15px; color:#3b82f6; font-size:22px;}
+    .card p {opacity:0.85; font-size:16px;}
+    footer {text-align:center; padding:40px 20px; border-top:1px solid #1f2937; font-size:15px; opacity:0.8;}
+    a {color:#3b82f6;}
+    @keyframes fadeIn {from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);}}
+    @media (max-width:768px){header{flex-direction:column; gap:15px; padding:15px 30px;} .hero h2{font-size:40px;} .hero p{font-size:16px;}}
   </style>
 </head>
 
@@ -138,15 +43,16 @@
   <h1>my-tech.shop</h1>
   <nav>
     <a href="#about">Über mich</a>
-    <a href="#tech">Technik</a>
     <a href="#contact">Kontakt</a>
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
   </nav>
 </header>
 
 <div class="hero">
   <h2>Willkommen bei <span>my-tech.shop</span></h2>
-  <p>Technologie. Innovation. Zukunft.  
-  Deine zentrale Plattform für moderne digitale Lösungen.</p>
+  <p>Dein Partner für Webseiten.  
+    </p>
   <a href="#contact" class="btn">Kontakt</a>
 </div>
 
@@ -155,31 +61,51 @@
   <p>
     Ich bin leidenschaftlich an Technologie interessiert und entwickle moderne,
     performante Lösungen im Webbereich.  
-    Diese Seite ist mein persönlicher Tech-Hub.
+    Ich bin technikaffin und programmiere Webseiten für kleine Unternehmen, die dringend online präsent sein wollen – auch mit kleinem Budget.
+    Dabei kombiniere ich modernes Design, Performance und einfache Bedienung, um digitale Lösungen zu schaffen, die funktionieren.
   </p>
 </section>
 
-<section id="tech">
-  <h2>Meine Bereiche</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Web Development</h3>
-      <p>Moderne Webseiten mit Fokus auf Performance und Design.</p>
-    </div>
-    <div class="card">
-      <h3>Technologie</h3>
-      <p>Alles rund um neue Trends, Tools und Innovationen.</p>
-    </div>
-    <div class="card">
-      <h3>Projekte</h3>
-      <p>Eigene Projekte und Experimente im Tech-Bereich.</p>
-    </div>
-  </div>
-</section>
+
 
 <section id="contact">
   <h2>Kontakt</h2>
-  <p>Email: kontakt@my-tech.shop</p>
+  <p>Email: <a href="mailto:test@my-tech.shop">test@my-tech.shop</a></p>
+  <p>Telefon: <a href="tel:+431234567890">+43 123 4567890</a></p>
+</section>
+
+<section id="impressum">
+  <h2>Impressum</h2>
+  <p><strong>my-tech.shop</strong><br>
+     Max Mustermann<br>
+     Musterstraße 12<br>
+     12345 Musterstadt<br>
+     Österreich</p>
+  <p><strong>Kontakt:</strong><br>
+     Telefon: +43 123 4567890<br>
+     Email: <a href="mailto:test@my-tech.shop">test@my-tech.shop</a></p>
+  <p><strong>Umsatzsteuer-ID:</strong> AT123456789</p>
+  <p><strong>Verantwortlich für den Inhalt:</strong><br>
+     Max Mustermann</p>
+</section>
+
+<section id="datenschutz">
+  <h2>Datenschutz</h2>
+  <p>Wir legen großen Wert auf den Schutz Ihrer persönlichen Daten. Diese Datenschutzerklärung informiert Sie über die Erhebung, Verarbeitung und Nutzung Ihrer Daten.</p>
+  <h3>1. Verantwortlicher</h3>
+  <p>Max Mustermann, Musterstraße 12, 12345 Musterstadt, Österreich, Email: <a href="mailto:test@my-tech.shop">test@my-tech.shop</a></p>
+  
+  <h3>2. Erhebung und Verarbeitung von Daten</h3>
+  <p>Wir erheben nur die Daten, die Sie uns freiwillig zur Verfügung stellen, z. B. über Kontaktformulare oder Email-Kontakt.</p>
+  
+  <h3>3. Nutzung von Daten</h3>
+  <p>Die von Ihnen bereitgestellten Daten verwenden wir ausschließlich zur Bearbeitung Ihrer Anfragen.</p>
+  
+  <h3>4. Cookies</h3>
+  <p>Unsere Webseite nutzt nur notwendige Cookies, um die Funktionalität zu gewährleisten. Wir verwenden keine Tracking- oder Werbecookies.</p>
+  
+  <h3>5. Ihre Rechte</h3>
+  <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten. Kontaktieren Sie uns hierzu bitte per Email.</p>
 </section>
 
 <footer>
