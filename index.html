@@ -3,92 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Webseite</title>
+  <title>my-tech.shop</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
-      background: #f9fafb;
-      color: #111;
+      background: #0a0f1c;
+      color: #e5e7eb;
+      line-height: 1.6;
     }
 
     header {
-      background: #111827;
-      color: white;
-      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      background: rgba(10,15,28,0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
     }
 
     header h1 {
-      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #3b82f6;
       font-size: 20px;
     }
 
     nav a {
-      color: white;
-      margin-left: 20px;
+      color: #cbd5e1;
+      margin-left: 25px;
       text-decoration: none;
-      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
     }
 
     .hero {
-      padding: 100px 40px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at top, #1e3a8a, #020617);
       text-align: center;
-      background: linear-gradient(135deg, #2563eb, #1e3a8a);
-      color: white;
     }
 
     .hero h2 {
-      font-size: 40px;
+      font-size: 48px;
+      font-family: 'Orbitron', sans-serif;
       margin-bottom: 20px;
     }
 
-    .hero p {
-      font-size: 18px;
-      opacity: 0.9;
+    .hero span {
+      color: #3b82f6;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: white;
-      color: #1e3a8a;
-      border-radius: 6px;
+    .hero p {
+      max-width: 600px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 14px 28px;
+      border: 1px solid #3b82f6;
+      color: #3b82f6;
       text-decoration: none;
-      font-weight: 600;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #3b82f6;
+      color: white;
+      box-shadow: 0 0 20px #3b82f6;
     }
 
     section {
-      padding: 60px 40px;
-      max-width: 1000px;
+      padding: 80px 40px;
+      max-width: 1100px;
       margin: auto;
     }
 
-    .features {
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 25px;
+      margin-top: 30px;
     }
 
     .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: #111827;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(59,130,246,0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(59,130,246,0.3);
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: #111827;
-      color: white;
+      border-top: 1px solid #1f2937;
       margin-top: 40px;
     }
   </style>
@@ -97,53 +135,55 @@
 <body>
 
 <header>
-  <h1>Meine Seite</h1>
+  <h1>my-tech.shop</h1>
   <nav>
     <a href="#about">Über mich</a>
-    <a href="#services">Services</a>
+    <a href="#tech">Technik</a>
     <a href="#contact">Kontakt</a>
   </nav>
 </header>
 
 <div class="hero">
-  <h2>Willkommen auf meiner Webseite</h2>
-  <p>Modern, schnell und professionell – erstellt mit GitHub Pages</p>
-  <a href="#contact" class="button">Kontakt aufnehmen</a>
+  <h2>Willkommen bei <span>my-tech.shop</span></h2>
+  <p>Technologie. Innovation. Zukunft.  
+  Deine zentrale Plattform für moderne digitale Lösungen.</p>
+  <a href="#contact" class="btn">Kontakt</a>
 </div>
 
 <section id="about">
   <h2>Über mich</h2>
   <p>
-    Hier kannst du dich oder dein Projekt vorstellen. Beschreibe kurz,
-    was du machst und was dich besonders macht.
+    Ich bin leidenschaftlich an Technologie interessiert und entwickle moderne,
+    performante Lösungen im Webbereich.  
+    Diese Seite ist mein persönlicher Tech-Hub.
   </p>
 </section>
 
-<section id="services">
-  <h2>Meine Leistungen</h2>
-  <div class="features">
+<section id="tech">
+  <h2>Meine Bereiche</h2>
+  <div class="grid">
     <div class="card">
-      <h3>Webdesign</h3>
-      <p>Moderne und responsive Webseiten.</p>
+      <h3>Web Development</h3>
+      <p>Moderne Webseiten mit Fokus auf Performance und Design.</p>
     </div>
     <div class="card">
-      <h3>Entwicklung</h3>
-      <p>Sauberer und effizienter Code.</p>
+      <h3>Technologie</h3>
+      <p>Alles rund um neue Trends, Tools und Innovationen.</p>
     </div>
     <div class="card">
-      <h3>Support</h3>
-      <p>Schnelle Hilfe bei Problemen.</p>
+      <h3>Projekte</h3>
+      <p>Eigene Projekte und Experimente im Tech-Bereich.</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Kontakt</h2>
-  <p>Email: deine@email.com</p>
+  <p>Email: kontakt@my-tech.shop</p>
 </section>
 
 <footer>
-  <p>© 2026 Meine Webseite</p>
+  <p>© 2026 my-tech.shop | Tech • Code • Zukunft</p>
 </footer>
 
 </body>
